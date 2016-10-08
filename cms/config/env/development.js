@@ -1,4 +1,4 @@
 module.exports = {
-    port: 7101,
-    mongodb: 'mongodb://localost/cmsdb'
+    port: 3000,
+    mongodb: 'mongodb://127.0.0.1/cmsdb'
 }

@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var News = mongoose.model('News');
+var News = require('../models/news.server.model');
 
 module.exports = {
     create: function (req, res, next) {

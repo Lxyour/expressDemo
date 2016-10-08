@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var multer = require('multer');
 
  module.exports = function () {
      console.log('init express...');

@@ -13,6 +13,7 @@ module.exports = {
         var pagesize = parseInt(req.query.pagesize, 10) || 10;
         var pagestart = parseInt(req.query.pagestart, 10) || 1;
 
+        console.log(News);
         News
         .find()
         .skip( (pagestart - 1) + pagesize)

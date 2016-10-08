@@ -6,4 +6,5 @@ var NewsSchema = new mongoose.Schema({
     creatTime: {type: Date, default: Date.now}
 });
 
-mongoose.model('News', NewsSchema);
+var News = mongoose.model('News', NewsSchema);
+module.exports = News;

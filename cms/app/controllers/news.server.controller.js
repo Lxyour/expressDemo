@@ -13,10 +13,9 @@ module.exports = {
         var pagesize = parseInt(req.query.pagesize, 10) || 10;
         var pagestart = parseInt(req.query.pagestart, 10) || 1;
 
-        console.log(News);
         News
         .find()
-        .skip( (pagestart - 1) + pagesize)
+        .skip( (pagestart - 1) * pagesize)
         .limit(pagesize)
         .exec(function (err, docs) {
             if(err) return next(err);
@@ -30,7 +29,7 @@ module.exports = {
         .findOne({_id: id})
         .exec(function (err, doc) {
             if(err) return next(err)
-            if(doc) return next(new Error('News not found'));
+            if(!doc) return next(new Error('News not found!'));
             res.news = doc;
             return next()
         })

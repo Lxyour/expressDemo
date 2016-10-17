@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
      console.log('init express...');
      var app = express();
      app.use(bodyParser.json());
+     app.use(express.static('./public'));
 
      require('../app/routes/news.server.routes')(app)
 

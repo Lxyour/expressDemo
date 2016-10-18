@@ -30,7 +30,7 @@ module.exports = {
         .exec(function (err, doc) {
             if(err) return next(err)
             if(!doc) return next(new Error('News not found!'));
-            res.news = doc;
+            req.news = doc;
             return next()
         })
     },

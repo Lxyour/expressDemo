@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var News = require('../models/news.server.model');
 
+//后端接口封装
 module.exports = {
     create: function (req, res, next) {
         var news = new News(req.body);

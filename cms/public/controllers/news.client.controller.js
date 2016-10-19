@@ -9,12 +9,12 @@ function NewsController($scope, NewsService) {
     //保存事件
     $scope.save = function () {
 
-        if(!$scope.new.content) {
-            $scope.editorMessage = 'Content is required';
-            return;
-        }
         if(!$scope.new.title) {
             $scope.editorMessage = 'Title is required';
+            return;
+        }
+        if(!$scope.new.content) {
+            $scope.editorMessage = 'Content is required';
             return;
         }
         $scope.editorMessage = '';
@@ -54,7 +54,7 @@ function NewsController($scope, NewsService) {
     }
 
     $scope.formatTime = function (time) {
-        return moment(time).format('YYYY-MM-DD hh:mm:ss')
+        return moment(time).format('YYYY-MM-DD HH:mm:ss')
     }
 
     //获取新闻列表

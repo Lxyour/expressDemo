@@ -1,6 +1,7 @@
 angular.module('webapp')
     .service('NewsService', ['$http', '$q', NewsData]);
 
+//前端请求接口
 function NewsData($http, $q) {
     function handleRequest(method, url, data) {
         var defered = $q.defer();

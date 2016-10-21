@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var News = require('../models/news.server.model');
 
 //后端接口封装
